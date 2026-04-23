@@ -7,12 +7,9 @@ nav: false
 nav_order: 7
 
 profiles:
-               
   - align: right
     image: Bouni.jpeg
     content: about_Bounitsis.md
     image_circular: false # crops the image to make it circular
     more_info: >
-
-
 ---

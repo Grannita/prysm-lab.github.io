@@ -12,6 +12,6 @@ children:
   - title: Net zero energy
     permalink: /PostDocs/
   - title: divider
-  - title: Data driven optimization 
+  - title: Data driven optimization
     permalink: /Alumni/
 ---
