@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://grannita.github.io/sitemap.xml
