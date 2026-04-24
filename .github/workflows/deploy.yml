@@ -64,7 +64,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout 
         uses: actions/checkout@v4
 
       - name: Setup Ruby
@@ -73,22 +73,23 @@ jobs:
           ruby-version: "3.4"
           bundler: none # We will install manually below to avoid frozen lockfile errors
 
-      - name: Update _config.yml ⚙️
+      - name: Update _config.yml 
         uses: fjogeleit/yaml-update-action@main
         with:
           commitChange: false
           valueFile: "_config.yml"
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
-
-      - name: Install and Build 🔧
+      
+      - name: Install and Build 
         run: |
-          # 1. Install ImageMagick (Fixes the 'convert: not found' error)
+          # 1. Install ImageMagick
           sudo apt-get update
           sudo apt-get install -y imagemagick libmagickwand-dev
 
           # 2. Install Ruby dependencies
           gem install bundler
+          # THIS IS THE FIX: Disable frozen mode so it can fix the checksums
           bundle config set --local frozen false
           bundle install
 
@@ -97,12 +98,12 @@ jobs:
           export JEKYLL_ENV=production
           bundle exec jekyll build
 
-      - name: Purge unused CSS 🧹
+      - name: Purge unused CSS 
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
 
-      - name: Deploy 🚀
+      - name: Deploy 
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
