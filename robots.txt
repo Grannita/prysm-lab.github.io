@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://grannita.github.io/sitemap.xml
+Sitemap: https://grannita.github.io/prysm-lab.github.io/sitemap.xml
