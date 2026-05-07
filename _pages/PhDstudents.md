@@ -8,7 +8,7 @@ nav_order: 7
 
 profiles:
   - align: right
-    image: Mina_fix.png
+    image: Mina.png
     content: about_Mina.md
     image_circular: false # crops the image to make it circular
     more_info: >
