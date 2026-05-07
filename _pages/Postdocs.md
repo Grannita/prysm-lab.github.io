@@ -8,7 +8,7 @@ nav_order: 7
 
 profiles:
   - align: right
-    image: Xu.jpg
+    image: Xu.png
     content: about_Xu.md
     image_circular: false # crops the image to make it circular
     more_info: >
