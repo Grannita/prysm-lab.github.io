@@ -14,7 +14,7 @@ profiles:
     more_info: >
 
   - align: right
-    image: Margarita.jpg
+    image: Margarita.jpeg
     content: about_Margarita.md
     image_circular: false # crops the image to make it circular
     more_info: >
